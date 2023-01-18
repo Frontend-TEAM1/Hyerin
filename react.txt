@@ -1,0 +1,108 @@
+<1강. 리액트 설치법>
+
+리액트의 장점
+1. spa 사이트를 만들 수 있음 (페이지 전환같은 걸 부드럽게 만들어줌)
+2. 컴포넌트로 html 재사용이 편리함
+3. 서버데이터를 바로바로 html에 자동 반영할 수 있음
+4. 유사 프레임워크들 중 사용자가 가장 많음
+
+설치방법
+1. nodeJs 설치
+2. vscode 에디터 설치
+
+프로젝트 생성
+1. 작업용 폴더 만들기
+2. 폴더에서 shift + 우클릭 > powershell/터미널 열기 클릭
+3. 열린 터미널에 "npx create-react-app 프로젝트명" 입력
+4. 에디터에서 File - Open Folder로 작업 폴더 오픈
+5. 미리보기 띄우기는 터미널에서 npm start
+
+create react app 라이브러리의 도움을 받아서 프로젝트 생성
+	↑사용하려면 npm(라이브러리 모아놓은 플랫폼) 필요 < node.js 설치하면 사용가능
+	  프로젝트 생성하는 명령어 제공
+
+node_modules 폴더 : 라이브러리 소스코드 보관함
+public 폴더 : static 파일 보관함
+src 폴더 : 코드 짜는 곳
+package.json : 프로젝트 정보
+
+
+<2강. jsx 문법>
+
+jsx : 자바스크립트 안에서 html을 쉽게 작성할 수 있도록 도와주는 부가 기능
+
+원래 리액트에서 <div> 만드는 법
+-> React.createElement('div', null, 'HelloWorl')
+jsx 사용하면 
+-> <div></div>
+
+jsx 문법
+1. class 넣을 땐 className
+* css 파일 쓰려면 상단에서 import 'css파일 경로'
+2. 변수 넣을 땐 {중괄호}
+3. style 넣을 땐 style={ {스타일명: '값'} }
+
+
+<3강. state 사용>
+
+return() 안에는 병렬로 태그 2개 이상 기입 금지
+
+자료를 잠깐 저장할 땐 변수 사용 (let, var, const) > state를 써도 됨
+
+state 만드는 법
+1. import { ustState }
+2. useState (보관할 자료)
+3. let [작명, 작명] > destructuring 문법
+			let [a, c] = [1, 2]
+
+* 왜 state 써야함?
+일반 변수는 갑자기 변경되면 html에 자동으로 반영되지 않음
+state는 갑자기 변경되면 state 쓰던 html은 자동 재렌더링됨
+
+자주 변경될 것 같은 html 부분은 state로 만들어 놓기
+
+
+<4강. 버튼만들기>
+
+/* eslint-disable */ : Lint 끄는 기능 > warning 메세지 안 뜨게 함
+
+onClick 만드는 법
+1. onClick={ }
+2. 중괄호 안에는 함수 이름을 넣어야 함
+
+state 변경하는 법
+state 변경함수 사용
+
+
+<5강. state가 array/object일 경우>
+
+array/object다룰 때 원본은 보존하는 것이 좋음
+
+state 변경함수 특징 : 기존 state == 신규 state의 경우 변경 안 해줌
+array/object 특징 : array/object 담은 변수엔 화살표만 저장됨
+		    변수1 & 변수2 화살표가 같으면 변수1 == 변수2 비교해도 true 나옴
+		    reference data type이라서 그럼
+
+state가 array/object면 독립적 카피본을 만들어서 수정해야함
+
+
+<6강. component>
+
+컴포넌트 만드는 법
+1. function 만들고
+2. return() 안에 html 담기
+3. <함수명></함수명> 쓰기
+
+div를 병렬적으로 기입할 때
+<div>
+	<div></div> <div></div>
+</div> -> 의미없는 div
+
+의미없는 div 대신 <></> 사용 가능
+
+어떤걸 component로 만들면 좋은가
+1. 반복적인 html 축약할 때
+2. 큰 페이지들
+3. 자주 변경되는 것들
+ 
+컴포넌트의 단점 : state 가져다쓸 때 문제 생김
