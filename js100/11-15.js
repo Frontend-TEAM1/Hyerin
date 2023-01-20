@@ -57,6 +57,7 @@ console.log(a[n-1]);
         입력 : 2
         출력 : 2
 */
+
 const num = prompt('숫자를 입력하세요.');
 
 if (n%3 == 0) {
@@ -72,6 +73,7 @@ if (n%3 == 0) {
 
 const name = prompt('이름을 입력하세요.');
 console.log(`안녕하세요. 저는 ${name}입니다.`); 
+
 
 
 
