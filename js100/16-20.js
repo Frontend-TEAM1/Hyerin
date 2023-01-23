@@ -41,3 +41,9 @@ console.log(Math.pow(parseInt(n[0], 10)), parseInt(n[1], 10));
 //  20.  몫과 나머지
 //       공백으로 구분하여 두 숫자가 주어집니다
 //       두 번째 숫자로 첫 번째 숫자를 나누었을 때 그 몫과 나머지를 공백으로 구분하여 출력하세요
+
+const number = prompt('첫번째숫자, 두번째숫자 : ').split(' ');
+const share = Math.floor(parseInt(n[0], 10) / parseInt(n[1], 10));
+const rest = parseInt(n[0], 10) % parseInt(n[1], 10);
+
+console.log(share, rest);
