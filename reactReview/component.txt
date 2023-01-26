@@ -1,0 +1,6 @@
+[instrument 메인페이지 컴포넌트화]
+
+- 헤더, 푸터
+- 버튼 ex) read more / learn more / what we do / our work
+- eamas institude / dropbox ~ 사진&글씨 div
+- explore some of our most
